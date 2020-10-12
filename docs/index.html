@@ -9,6 +9,15 @@
       i.src=a.urls;
       i.height="500";
       document.getElementById("gallery").appendChild(i);
+      var number="";
+      if (a.units!="") {
+       number = a.units+" - "+a.numbers; 
+      }
+      else
+      {
+       number=a.numbers; 
+      }
+      document.getElementById("number").innerHTML = number;
     }
     $(document).ready(function () {
     var s = document.createElement("script");
