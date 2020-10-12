@@ -2,10 +2,15 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    
+    function writeCode(a) {
+      $("#code").setValue(a);
+    }
     $(document).ready(function () {
-      $.get( "https://script.google.com/a/sierra.one/macros/s/AKfycbzpctZ6-VqDxgkrDiZyx8qVvmvyq_mkva-vqe-JLdI/dev?action=query", function( data ) {
-  $( "#code" ).html( data );
-});
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "https://script.google.com/a/sierra.one/macros/s/AKfycbzpctZ6-VqDxgkrDiZyx8qVvmvyq_mkva-vqe-JLdI/dev?action=query&callback=writeCode";
+    $("head").append(s);
     });
   </script>
 </head>
