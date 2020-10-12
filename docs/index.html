@@ -1,11 +1,20 @@
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.get( "https://script.google.com/a/sierra.one/macros/s/AKfycbzpctZ6-VqDxgkrDiZyx8qVvmvyq_mkva-vqe-JLdI/dev?action=query", function( data ) {
+  $( "#code" ).html( data );
+});
+    });
+  </script>
 </head>
 <body>
 <h1>Onfleet Image Labeller</h1>
 <div id="gallery">
 
 </div>
+  <div id="code"></div>
 <h2 id="number"></h2>
 <h3>Delivery Success</h3>
 <input type="radio" id="true" name="success" value="TRUE">
