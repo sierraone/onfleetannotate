@@ -5,10 +5,17 @@
     
     function writeCode(a) {
       console.log(a.urls);
-      var i = document.createElement("img");
-      i.src=a.urls;
+      var i;
+      var sources = a.urls;
+      sources = sources.split("\n");
+      sources.forEach(element=> function (element) {
+      i=document.createElement("img");
+      i.src = element;
       i.height="500";
       document.getElementById("gallery").appendChild(i);
+      });
+
+
       var number="";
       if (a.units!="") {
        number = a.units+" - "+a.numbers; 
