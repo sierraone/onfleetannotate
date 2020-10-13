@@ -2,7 +2,7 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    
+    var srcCode ="https://script.google.com/a/sierra.one/macros/s/AKfycbzpctZ6-VqDxgkrDiZyx8qVvmvyq_mkva-vqe-JLdI/dev";
     function writeCode(a) {
       var i;
       var sources = a.urls;
@@ -32,7 +32,7 @@
     $(document).ready(function () {
     var s = document.createElement("script");
     s.type = "text/javascript";
-    s.src = "https://script.google.com/macros/s/AKfycbzbw9DNdmKu_fHbJALD59FzQoaUiY_2CSuWphY8OrMUFpCWTqs/exec?action=query&callback=writeCode";
+    s.src = srcCode+"?action=query&callback=writeCode";
     $("head").append(s);
     });
     
@@ -45,7 +45,7 @@
       var quality = document.querySelector('input[name="quality"]:checked').value
       var s = document.createElement("script");
        s.type = "text/javascript";
-       s.src = "https://script.google.com/macros/s/AKfycbzbw9DNdmKu_fHbJALD59FzQoaUiY_2CSuWphY8OrMUFpCWTqs/exec?action=write&callback=refresh&row="+row+"&success="+success+"&quality="+quality;
+       s.src = srcCode+"?action=write&callback=refresh&row="+row+"&success="+success+"&quality="+quality;
     $("head").append(s);
     }
   </script>
