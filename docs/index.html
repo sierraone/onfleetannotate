@@ -41,8 +41,8 @@
     }
     function submit() {
       console.log(document.getElementById("row").value);
-      console.log(document.getElementById("success").value);
-      console.log(document.getElementById("quality").value);
+      console.log(document.querySelector('input[name="success"]:checked').value);
+      console.log(document.querySelector('input[name="quality"]:checked').value);
     }
   </script>
 </head>
