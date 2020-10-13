@@ -27,6 +27,7 @@
        number=a.number; 
       }
       document.getElementById("number").innerHTML = number;
+      document.getElementById("row").value = a.row;
     }
     $(document).ready(function () {
     var s = document.createElement("script");
@@ -34,6 +35,15 @@
     s.src = "https://script.google.com/a/sierra.one/macros/s/AKfycbzpctZ6-VqDxgkrDiZyx8qVvmvyq_mkva-vqe-JLdI/dev?action=query&callback=writeCode";
     $("head").append(s);
     });
+    
+    function refresh(flag) {
+      
+    }
+    function submit() {
+      console.log(document.getElementById("row").value);
+      console.log(document.getElementById("success").value);
+      console.log(document.getElementById("quality").value);
+    }
   </script>
 </head>
 <body>
@@ -44,6 +54,7 @@
   <div id="code"></div>
 <h2 id="number"></h2>
 <h3>Delivery Success</h3>
+  <input type="hidden" id="row">
 <input type="radio" id="true" name="success" value="TRUE">
 <label for="true">TRUE</label><br>
 
@@ -60,6 +71,6 @@
 <input type="radio" id="bad" name="quality" value="BAD">
 <label for="bad">BAD</label><br>
 <br>
-  <button type="button" id="submit">Submit</button>
+  <button type="button" id="submit" onclick="submit">Submit</button>
 </body>
 </html>
