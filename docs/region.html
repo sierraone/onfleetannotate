@@ -33,7 +33,7 @@ function showCoords(c)
     s.src = srcCode+"?action=query_region&callback=writeCode";
     $("head").append(s);
     $('#target').Jcrop({
-    onSelect: showCoords(c)
+    onSelect: function(c) {showCoords(c);}
     });
     });
 
