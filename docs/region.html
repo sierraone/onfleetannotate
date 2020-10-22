@@ -9,7 +9,7 @@
       var i;
       i=document.createElement("img");
       i.src = a.urls;
-      i.height="800";
+      i.height="700";
       i.id="target";
       document.getElementById("gallery").appendChild(i);
       document.getElementById("number").innerHTML = a.number;
@@ -26,10 +26,10 @@
 
 function showCoords(c)
 {
-  $("#x").text(c.x);
-  $("#y").text(c.y);
-  $("#w").text(c.w);
-  $("#h").text(c.h);
+  $("#x").val(c.x);
+  $("#y").val(c.y);
+  $("#w").val(c.w);
+  $("#h").val(c.h);
 };
 
     $(document).ready(function () {
