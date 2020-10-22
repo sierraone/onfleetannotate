@@ -14,10 +14,7 @@
       document.getElementById("gallery").appendChild(i);
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
-      $('#target').Jcrop({
-    onChange:   showCoords,
-    onSelect:   showCoords
-  });
+     
     }
 
  
@@ -40,7 +37,19 @@ function showCoords(c)
     $("head").append(s);
        
     });
-    
+
+            $(document).ready(function(){
+                $('#target').Jcrop({
+                    onSelect: function(c){
+                        console.log(c);
+                        console.log(c.x);
+                        console.log(c.y);
+                        console.log(c.w);
+                        console.log(c.h);
+                    }
+                })
+            })
+
     function refresh(flag) {
       if (flag=="TRUE") location.reload();
     }
