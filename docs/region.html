@@ -6,12 +6,7 @@
   <script>
     var srcCode ="https://script.google.com/macros/s/AKfycbzbw9DNdmKu_fHbJALD59FzQoaUiY_2CSuWphY8OrMUFpCWTqs/exec";
     function writeCode(a) {
-      var i;
-      i=document.createElement("img");
-      i.src = a.urls;
-      i.height="700";
-      i.id="target";
-      document.getElementById("gallery").appendChild(i);
+      i=document.getElementByid("target").src=a.urls;
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
      
@@ -37,14 +32,14 @@ function showCoords(c)
     s.type = "text/javascript";
     s.src = srcCode+"?action=query_region&callback=writeCode";
     $("head").append(s);
-       
+    $('#target').Jcrop({
+    onSelect: showCoords(c)
+    });
     });
 
-            $(document).ready(function(){
-                $('#target').Jcrop({
-                    onSelect: showCoords(c)
-                })
-            })
+
+
+
 
     function refresh(flag) {
       if (flag=="TRUE") location.reload();
@@ -63,7 +58,7 @@ function showCoords(c)
 <body>
 <h1>Onfleet Image Labeller</h1>
 <div id="gallery">
-
+<img id="target" height="700">
 </div>
 <h1 id="number" style="background-color:yellow;"></h1>
 <input type="hidden" id="row">
