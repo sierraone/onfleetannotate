@@ -15,12 +15,12 @@
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
     }
-jQuery(function($){
+
   $('#target').Jcrop({
     onChange:   showCoords,
     onSelect:   showCoords
   });
-});
+
 
 // Simple event handler, called from onChange and onSelect
 // event handlers to show an alert, as per the Jcrop 
