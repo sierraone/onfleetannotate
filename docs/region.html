@@ -9,7 +9,9 @@
       document.getElementById("target").src=a.urls;
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
-     
+         $('#target').Jcrop({
+    onSelect: function(c) {showCoords(c);}
+    });
     }
 
  
@@ -32,9 +34,7 @@ function showCoords(c)
     s.type = "text/javascript";
     s.src = srcCode+"?action=query_region&callback=writeCode";
     $("head").append(s);
-    $('#target').Jcrop({
-    onSelect: function(c) {showCoords(c);}
-    });
+
     });
 
 
