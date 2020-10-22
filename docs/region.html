@@ -46,17 +46,19 @@ function showCoords(c)
     }
     function submit() {
       var row = document.getElementById("row").value;
-      var success = document.querySelector('input[name="success"]:checked').value;
-      var quality = document.querySelector('input[name="quality"]:checked').value
+      var x = document.getElementById("x").value;
+      var y = document.getElementById("y").value;
+      var w = document.getElementById("w").value;
+      var h = document.getElementById("h").value;
       var s = document.createElement("script");
        s.type = "text/javascript";
-       s.src = srcCode+"?action=write&callback=refresh&row="+row+"&success="+success+"&quality="+quality;
+       s.src = srcCode+"?action=write_region&callback=refresh&row="+row+"&x="+x+"&y="+y+"&w="+w+"&h="+h;
     $("head").append(s);
     }
   </script>
 </head>
 <body>
-<h1>Onfleet Image Labeller</h1>
+<h1>Onfleet Image Region</h1>
 <div id="gallery">
 <img id="target" height="700px">
 </div>
