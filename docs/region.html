@@ -14,12 +14,13 @@
       document.getElementById("gallery").appendChild(i);
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
-    }
-
-  $('#target').Jcrop({
+      $('#target').Jcrop({
     onChange:   showCoords,
     onSelect:   showCoords
   });
+    }
+
+ 
 
 
 // Simple event handler, called from onChange and onSelect
@@ -37,6 +38,7 @@ function showCoords(c)
     s.type = "text/javascript";
     s.src = srcCode+"?action=query_region&callback=writeCode";
     $("head").append(s);
+       
     });
     
     function refresh(flag) {
