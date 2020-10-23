@@ -40,7 +40,13 @@ function showCoords(c)
 
 
 
-
+    function fail() {
+      var row = document.getElementById("row").value;
+      var s = document.createElement("script");
+       s.type = "text/javascript";
+       s.src = srcCode+"?action=fail_region&callback=refresh&row="+row;
+    $("head").append(s);
+    }
     function refresh(flag) {
       if (flag=="TRUE") location.reload();
     }
@@ -65,6 +71,6 @@ function showCoords(c)
 <h1 id="number" style="background-color:yellow;"></h1>
 <input type="hidden" id="row">
 <input type="text" id="x"><input type="text" id="y"><input type="text" id="w"><input type="text" id="h">
-  <button type="button" id="submit" onclick="submit()">Submit</button>
+  <button type="button" id="submit" onclick="submit()">Submit</button><button type="button" id="fail" onclick="fail()">Fail</button>
 </body>
 </html>
