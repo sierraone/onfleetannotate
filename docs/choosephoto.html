@@ -23,6 +23,7 @@
       img.src = element;
        a.onclick = function () {selector(img.src);}
       a.append(img);
+       a.style.display = "inline-block";
       $("#gallery").append(a);
 
       document.getElementById("number").innerHTML = a.number;
