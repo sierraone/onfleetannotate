@@ -21,11 +21,11 @@
       img.height = "700";
       img.style.marginRight = "10";
       img.src = element;
-       a.onclick = function () {selector(img.src);}
+       a.onclick = selector(img);
       a.append(img);
        a.style.display = "inline-block";
       $("#gallery").append(a);
-
+      });
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
     }
