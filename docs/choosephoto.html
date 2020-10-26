@@ -19,7 +19,7 @@
       img.height = "700";
       img.style.marginRight = "10";
       img.src = element;
-      img.addEventListener("click", selector(img));
+      img.click(selector(img));
       $("#gallery").append(img);
       });
       document.getElementById("number").innerHTML = a.number;
