@@ -25,10 +25,12 @@
   var row = document.getElementById("row").value;
   var s = document.createElement("script");
   s.type = "text/javascript";
-  s.src = srcCode+"?action=image_select&callback=alert&row="+row+"&url="+encodeURIComponent(obj.src);
+  s.src = srcCode+"?action=image_select&callback=redirect&row="+row+"&url="+encodeURIComponent(obj.src);
     $("head").append(s);
  }
- 
+ function redirect(flag) {
+      if (flag=="TRUE") location.replace("https://sierraone.github.io/onfleetannotate/region");
+    }
 
 </script>
 </head>
