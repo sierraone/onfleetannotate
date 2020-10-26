@@ -13,18 +13,18 @@
  
  function writeCode(a) {
   var img;    
-  var a;
+  var as;
   var links = a.urls.split("\n");
       links.forEach(function(element) {
       img = document.createElement("img");
-       a = document.createElement("div");
+       as = document.createElement("div");
       img.height = "700";
       img.style.marginRight = "10";
       img.src = element;
-       a.onclick = "selector(this)";
-      a.append(img);
-       a.style.display = "inline-block";
-      $("#gallery").append(a);
+       as.onclick = "selector(this)";
+      as.append(img);
+       as.style.display = "inline-block";
+      $("#gallery").append(as);
       });
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
