@@ -22,8 +22,14 @@
       document.getElementById("row").value = a.row;
     }
  function selector(obj) {
-  console.log(obj.src);
+  var row = document.getElementById("row").value;
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+       s.src = srcCode+"?action=image_select&callback=alert&row="+row+"&url="obj.src;
+    $("head").append(s);
  }
+ 
+
 </script>
 </head>
 <body>
