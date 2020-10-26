@@ -23,7 +23,8 @@
       img.style.marginRight = "10";
       img.src = element;
        a.onclick = function () {selector(img.src);}
-      $("#gallery").append(img);
+      a.append(img);
+      $("#gallery").append(a);
       });
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
