@@ -1,6 +1,8 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+ var srcCode ="https://script.google.com/macros/s/AKfycbzbw9DNdmKu_fHbJALD59FzQoaUiY_2CSuWphY8OrMUFpCWTqs/exec";
  $(document).ready(function () {
     var s = document.createElement("script");
     s.type = "text/javascript";
@@ -8,9 +10,34 @@
     $("head").append(s);
 
     });
+ 
+ function writeCode(a) {
+  var img;    
+  var links = a.urls.split("\n");
+      links.forEach(function(element) {
+      img = document.createElement("img");
+      img.height = "700";
+      img.style.marginRight = "10";
+      img.src = element;
+      img.onclick = "selector(this);";
+      $("#gallery").append(img);
+      });
+      document.getElementById("number").innerHTML = a.number;
+      document.getElementById("row").value = a.row;
+         $('#target').Jcrop({
+    onSelect: function(c) {showCoords(c);}
+    });
+    }
+ 
 </script>
 </head>
 <body>
+<h1>Onfleet Image Selector</h1>
+<div id="gallery">
 
+</div>
+<h1 id="number" style="background-color:yellow;"></h1>
+<input type="hidden" id="row">
+</body>
 </body>
 </html>
