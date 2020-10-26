@@ -16,7 +16,7 @@
   var links = a.urls.split("\n");
       links.forEach(function(element) {
       img = document.createElement("img");
-      $("#gallery").append("<img src='"+element+"' onclick='selector(this.src)' height='700px' margin-right='10px'>");
+      $("#gallery").append("<img src='"+element+"' onclick='selector(this)' height='700px' margin-right='10px'>");
       });
       document.getElementById("number").innerHTML = a.number;
       document.getElementById("row").value = a.row;
