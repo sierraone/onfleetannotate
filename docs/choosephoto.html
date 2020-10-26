@@ -21,7 +21,7 @@
       img.height = "700";
       img.style.marginRight = "10";
       img.src = element;
-       a.onclick = function () {selector(img.src);}
+       a.onclick = function () {selector(a);}
       a.append(img);
        a.style.display = "inline-block";
       $("#gallery").append(a);
@@ -30,7 +30,7 @@
       document.getElementById("row").value = a.row;
     }
  function selector(obj) {
-  console.log(obj);
+  console.log(obj.childNodes[0].src);
  }
 </script>
 </head>
